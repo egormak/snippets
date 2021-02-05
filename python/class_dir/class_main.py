@@ -2,7 +2,7 @@ from class_example import Employee, Developer, Manager
 
 ####
 # Create
-emp_1 = Employee('Corey','Schafer', 50000)
+emp_1 = Employee('Corey', 'Schafer', 50000)
 emp_2 = Employee('Test', 'User', 60000)
 # print(Employee.num_of_emps)
 ####
@@ -37,7 +37,7 @@ emp_2 = Employee('Test', 'User', 60000)
 ####
 
 ####
-# # Change amount by classmethod
+# Change amount by classmethod
 # Employee.set_raise_amt(1.10)
 # print(Employee.raise_amount)
 # print(emp_1.raise_amount)

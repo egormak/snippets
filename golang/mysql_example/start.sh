@@ -1,0 +1,2 @@
+docker run --name myadmin -it --rm --link mariadb -p 8080:80 -e PMA_HOST=mariadb phpmyadmin
+docker run --rm --name mariadb -p 3306:3306 -v /home/egorka/Downloads/temp_sql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=toor -e MYSQL_DATABASE=golang mariadb
