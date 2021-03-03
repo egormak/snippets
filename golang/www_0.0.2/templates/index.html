@@ -3,10 +3,19 @@
 {{ template "header" }}
 
 <body>
-<h1>Main Page</h1>
-<p>Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Mollitia laudantium earum, dolores
-        reiciendis nam quod non voluptatibus iste blanditiis
-        obcaecati laborum aliquam, libero aliquid tempore culpa quis ut ad amet?</p>
-{{ template "footer" }}
+        <a href="/create">Создать пост</a>
+        <h1>Main Page</h1>
+        <p>Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Mollitia laudantium earum, dolores
+                reiciendis nam quod non voluptatibus iste blanditiis
+                obcaecati laborum aliquam, libero aliquid tempore culpa quis ut ad amet?</p>
+{{ range . }}
+<h2>{{ .Title }}</h2>
+<p>{{ .Anons }}</p>
+<a href="/post/{{ .Id }}">Read</a>
+{{ else }}
+<p>No Article</p>
+{{ end }}
+        
+</body>
 {{ end }}
